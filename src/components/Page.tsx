@@ -18,7 +18,7 @@ const Page: React.FC<PageProps> = ({ children }) => {
 
     return (
         <section className="min-h-screen w-full snap-center">
-            <div ref={ref} className="h-full w-full">
+            <div ref={ref} className="h-screen w-full relative">
                 {children}
             </div>
         </section>
