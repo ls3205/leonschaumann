@@ -17,17 +17,18 @@ const Navlink: React.FC<NavlinkProps> = ({
     active = false,
 }) => {
     return (
-        <div className={cn(className, "group mb-2 flex flex-row ")}>
+        <div className={cn(className, "group mb-2 flex flex-row")}>
             <Dot
                 className={cn(
-                    active ? "text-primary" : "text-transparent",
-                    "h-full w-[35px] border-b-2 border-transparent",
+                    active ? "text-foreground" : "text-transparent",
+                    "h-full w-[35px] border-b-2 border-transparent transition-all duration-300",
                 )}
             />
             <Link
                 href={href}
                 className={cn(
-                    "flex flex-row border-b-2 border-transparent align-middle font-semibold leading-loose text-primary group-hover:border-primary",
+                    active ? "text-foreground" : "text-primary",
+                    "flex flex-row border-b-2 border-transparent align-middle font-semibold leading-loose group-hover:border-primary transition-all duration-300",
                 )}
             >
                 {children}

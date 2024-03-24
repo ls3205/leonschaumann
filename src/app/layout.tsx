@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { Inter, Sometype_Mono } from "next/font/google";
 import Navbar from "~/components/Navbar";
+import CursorHighlight from "~/components/CursorHighlight";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
             <body className={`${sometype.className}`}>
                 <Navbar />
                 {children}
+                <CursorHighlight />
             </body>
         </html>
     );
