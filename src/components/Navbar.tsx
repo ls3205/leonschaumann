@@ -3,7 +3,10 @@
 import React, { useEffect, useState } from "react";
 import Navlink from "./Navlink";
 import { motion } from "framer-motion";
-import { ChevronsDown } from "lucide-react";
+import { ChevronsDown, Github, Linkedin } from "lucide-react";
+import { Separator } from "./ui/Separator";
+import Link from "next/link";
+import MobileNavbar from "./MobileNavbar";
 
 interface NavbarProps {}
 
@@ -30,26 +33,53 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     }, []);
 
     return (
-        <div className="fixed left-[20%] top-[20%] z-50 flex h-[60%] w-[140px] flex-col space-y-4">
-            <Navlink href={"#welcome"} active={activeLink === 0} className="mb-8">
-                leon schaumann
-            </Navlink>
-            <Navlink href={"#about"} active={activeLink === 1}>
-                about
-            </Navlink>
-            <Navlink href={"#stack"} active={activeLink === 2}>
-                stack
-            </Navlink>
-            <Navlink href={"#projects"} active={activeLink === 3}>
-                projects
-            </Navlink>
-            <Navlink href={"#experience"} active={activeLink === 4}>
-                experience
-            </Navlink>
-            <Navlink href={"#contact"} active={activeLink === 5}>
-                contact
-            </Navlink>
-        </div>
+        <>
+            <div className="invisible fixed top-[20%] z-50 flex flex-row md:visible md:left-[10%] xl:left-[15%]">
+                <div className="flex w-[140px] flex-col space-y-4">
+                    <Navlink href={"#welcome"} active={activeLink === 0}>
+                        leon schaumann
+                    </Navlink>
+                    <Navlink href={"#about"} active={activeLink === 1}>
+                        about
+                    </Navlink>
+                    <Navlink href={"#stack"} active={activeLink === 2}>
+                        stack
+                    </Navlink>
+                    <Navlink href={"#projects"} active={activeLink === 3}>
+                        projects
+                    </Navlink>
+                    <Navlink href={"#experience"} active={activeLink === 4}>
+                        experience
+                    </Navlink>
+                    <Navlink href={"#contact"} active={activeLink === 5}>
+                        contact
+                    </Navlink>
+                    <Separator />
+                    <div className="flex flex-row">
+                        <Link
+                            href={"https://github.com/ls3205"}
+                            target="_blank"
+                            className="flex basis-1/2 flex-row justify-center text-primary transition-all duration-300 hover:text-foreground"
+                        >
+                            <Github />
+                        </Link>
+                        <Link
+                            href={"https://www.linkedin.com/in/leon-schaumann/"}
+                            target="_blank"
+                            className="flex basis-1/2 flex-row justify-center text-primary transition-all duration-300 hover:text-foreground"
+                        >
+                            <Linkedin />
+                        </Link>
+                    </div>
+                </div>
+                <Separator
+                    orientation="vertical"
+                    className="ml-4 h-auto bg-primary opacity-50"
+                />
+            </div>
+
+            <MobileNavbar activeLink={activeLink} />
+        </>
     );
 };
 

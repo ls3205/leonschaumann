@@ -8,6 +8,7 @@ interface NavlinkProps {
     className?: string;
     children?: ReactNode;
     active?: boolean;
+    onClick?: () => void;
 }
 
 const Navlink: React.FC<NavlinkProps> = ({
@@ -15,15 +16,16 @@ const Navlink: React.FC<NavlinkProps> = ({
     className,
     children,
     active = false,
+    onClick
 }) => {
     return (
-        <div className={cn(className, "group mb-2 flex flex-row")}>
-            <Dot
+        <div className={cn("group mb-2 flex flex-row", className)} onClick={onClick}>
+            {/* <Dot
                 className={cn(
                     active ? "text-foreground" : "text-transparent",
                     "h-full w-[35px] border-b-2 border-transparent transition-all duration-300",
                 )}
-            />
+            /> */}
             <Link
                 href={href}
                 className={cn(

@@ -21,7 +21,7 @@ const CursorHighlight: React.FC<CursorHighlightProps> = ({}) => {
 
     return (
         <motion.div
-            className="fixed left-4 top-4 z-30 h-0 w-0 rounded-full bg-primary shadow-[0px_0px_40px_20px] shadow-primary"
+            className="invisible fixed left-4 top-4 h-0 w-0 rounded-full bg-primary shadow-[0px_0px_40px_20px] shadow-primary md:visible"
             style={{
                 translateX: cursorX,
                 translateY: cursorY,
