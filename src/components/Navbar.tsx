@@ -9,29 +9,17 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
     const [activeLink, setActiveLink] = useState(0);
-    const [vh, setVh] = useState(document.documentElement.clientHeight);
-
-    useEffect(() => {
-        const handleResize = () => {
-            const calcVh = Math.max(
-                document.documentElement.clientHeight || 0,
-                window.innerHeight || 0,
-            );
-            setVh(calcVh);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
     useEffect(() => {
         const element = document.getElementById("main") as HTMLDivElement;
 
         const handleScroll = () => {
             const position = element?.scrollTop;
-            // const scrollSection = Math.floor(position/vh);
-            const scrollSection = position / vh;
+            const scrollSection = Math.round(
+                position / document.documentElement.clientHeight,
+            );
+
+            console.log(scrollSection);
 
             setActiveLink(scrollSection);
         };
@@ -42,28 +30,24 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     }, []);
 
     return (
-        <div className="fixed left-[20%] top-[20%] flex h-[60%] w-[140px] flex-col space-y-4">
-            <Navlink
-                href={""}
-                active={activeLink === 0 ? true : false}
-                className="mb-8"
-            >
-                Leon Schaumann
+        <div className="fixed left-[20%] top-[20%] z-50 flex h-[60%] w-[140px] flex-col space-y-4">
+            <Navlink href={""} active={activeLink === 0} className="mb-8">
+                leon schaumann
             </Navlink>
-            <Navlink href={""} active={activeLink === 1 ? true : false}>
-                About
+            <Navlink href={""} active={activeLink === 1}>
+                about
             </Navlink>
-            <Navlink href={""} active={activeLink === 2 ? true : false}>
-                Stack
+            <Navlink href={""} active={activeLink === 2}>
+                stack
             </Navlink>
-            <Navlink href={""} active={activeLink === 3 ? true : false}>
-                Projects
+            <Navlink href={""} active={activeLink === 3}>
+                projects
             </Navlink>
-            <Navlink href={""} active={activeLink === 4 ? true : false}>
-                Experience
+            <Navlink href={""} active={activeLink === 4}>
+                experience
             </Navlink>
-            <Navlink href={""} active={activeLink === 5 ? true : false}>
-                Contact
+            <Navlink href={""} active={activeLink === 5}>
+                contact
             </Navlink>
         </div>
     );

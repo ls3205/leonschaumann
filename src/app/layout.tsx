@@ -1,12 +1,16 @@
 import "~/styles/globals.css";
 
-import { Inter } from "next/font/google";
+import { Inter, Sometype_Mono } from "next/font/google";
 import Navbar from "~/components/Navbar";
 
 const inter = Inter({
     subsets: ["latin"],
     variable: "--font-sans",
 });
+
+const sometype = Sometype_Mono({
+    subsets: ["latin"],
+})
 
 export const metadata = {
     title: "Create T3 App",
@@ -21,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`font-sans ${inter.variable}`}>
+            <body className={`${sometype.className}`}>
                 <Navbar />
                 {children}
             </body>

@@ -20,7 +20,7 @@ const Welcome: React.FC<WelcomeProps> = ({}) => {
             Welcome
 
             <motion.div onViewportLeave={handleLeave} className={cn(opacity ? 'opacity-80' : 'opacity-0', `absolute bottom-10 left-1/2 flex flex-col`)}>
-                <h1 className="w-full text-center">Scroll to Begin</h1>
+                <h1 className="w-full text-center">scroll to begin</h1>
                 <div className="flex flex-row justify-between align-middle">
                     <ChevronsDown />
                     <ChevronsDown />
