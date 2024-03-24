@@ -5,7 +5,7 @@ interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = ({}) => {
     return (
-        <Page>
+        <Page id="experience">
             Experience
         </Page>
     )

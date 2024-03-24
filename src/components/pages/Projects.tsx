@@ -5,7 +5,7 @@ interface ProjectsProps {}
 
 const Projects: React.FC<ProjectsProps> = ({}) => {
     return (
-        <Page>
+        <Page id="projects">
             Projects
         </Page>
     )

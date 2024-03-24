@@ -5,7 +5,7 @@ interface StackProps {}
 
 const Stack: React.FC<StackProps> = ({}) => {
     return (
-        <Page>
+        <Page id="stack">
             Stack
         </Page>
     )

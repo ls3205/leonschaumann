@@ -31,22 +31,22 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
     return (
         <div className="fixed left-[20%] top-[20%] z-50 flex h-[60%] w-[140px] flex-col space-y-4">
-            <Navlink href={""} active={activeLink === 0} className="mb-8">
+            <Navlink href={"#welcome"} active={activeLink === 0} className="mb-8">
                 leon schaumann
             </Navlink>
-            <Navlink href={""} active={activeLink === 1}>
+            <Navlink href={"#about"} active={activeLink === 1}>
                 about
             </Navlink>
-            <Navlink href={""} active={activeLink === 2}>
+            <Navlink href={"#stack"} active={activeLink === 2}>
                 stack
             </Navlink>
-            <Navlink href={""} active={activeLink === 3}>
+            <Navlink href={"#projects"} active={activeLink === 3}>
                 projects
             </Navlink>
-            <Navlink href={""} active={activeLink === 4}>
+            <Navlink href={"#experience"} active={activeLink === 4}>
                 experience
             </Navlink>
-            <Navlink href={""} active={activeLink === 5}>
+            <Navlink href={"#contact"} active={activeLink === 5}>
                 contact
             </Navlink>
         </div>

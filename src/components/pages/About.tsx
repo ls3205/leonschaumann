@@ -5,7 +5,7 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
     return (
-        <Page>
+        <Page id="about">
             About
         </Page>
     )

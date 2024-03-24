@@ -5,7 +5,7 @@ interface ContactProps {}
 
 const Contact: React.FC<ContactProps> = ({}) => {
     return (
-        <Page>
+        <Page id="contact">
             Contact
         </Page>
     )

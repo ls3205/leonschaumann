@@ -16,7 +16,7 @@ const Welcome: React.FC<WelcomeProps> = ({}) => {
     }
 
     return (
-        <Page>
+        <Page id="welcome">
             Welcome
 
             <motion.div onViewportLeave={handleLeave} className={cn(opacity ? 'opacity-80' : 'opacity-0', `absolute bottom-10 left-1/2 flex flex-col`)}>

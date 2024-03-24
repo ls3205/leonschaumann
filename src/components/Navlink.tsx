@@ -27,8 +27,8 @@ const Navlink: React.FC<NavlinkProps> = ({
             <Link
                 href={href}
                 className={cn(
-                    active ? "text-foreground" : "text-primary",
-                    "flex flex-row border-b-2 border-transparent align-middle font-semibold leading-loose group-hover:border-primary transition-all duration-300",
+                    active ? "text-foreground border-foreground" : "text-primary border-transparent group-hover:border-primary",
+                    "flex flex-row border-b-2 align-middle font-semibold leading-loose transition-all duration-300",
                 )}
             >
                 {children}

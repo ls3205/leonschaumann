@@ -1,26 +1,16 @@
-"use client"
+"use client";
 
-import { MotionValue, useScroll, useTransform } from "framer-motion";
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode } from "react";
 
 interface PageProps {
     children?: ReactNode;
+    id: string;
 }
 
-const useParallax = (value: MotionValue<number>, distance: number) => {
-    return useTransform(value, [0, 1], [-distance, distance]);
-};
-
-const Page: React.FC<PageProps> = ({ children }) => {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useParallax(scrollYProgress, 300);
-
+const Page: React.FC<PageProps> = ({ children, id }) => {
     return (
-        <section className="min-h-screen w-full snap-center">
-            <div ref={ref} className="h-screen w-full relative">
-                {children}
-            </div>
+        <section id={id} className="min-h-screen w-full snap-center">
+            <div className="relative h-screen w-full">{children}</div>
         </section>
     );
 };
