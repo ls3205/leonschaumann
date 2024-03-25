@@ -7,7 +7,8 @@
         /* --background: 354 50% 5%; */
         --background: 312 60% 5%;
         --foreground: 354 5% 90%;
-        --card: 354 50% 0%;
+        /* --card: 354 50% 0%; */
+        --card: 312 61% 3%;
         --card-foreground: 354 5% 90%;
         --popover: 354 50% 5%;
         --popover-foreground: 354 5% 90%;
@@ -61,4 +62,8 @@
 
 ::-webkit-scrollbar {
     scrollbar-width: none;
+}
+
+.scrollable {
+    scrollbar-width: 5px;
 }

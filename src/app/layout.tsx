@@ -27,8 +27,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${sometype.className}`}>
-                <CursorHighlight />
                 {children}
+                <CursorHighlight />
                 <Navbar />
             </body>
         </html>
