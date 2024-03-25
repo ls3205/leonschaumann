@@ -3,6 +3,8 @@ import "~/styles/globals.css";
 import { Inter, Sometype_Mono } from "next/font/google";
 import Navbar from "~/components/Navbar";
 import CursorHighlight from "~/components/CursorHighlight";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Providers from "~/components/Providers";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -11,7 +13,7 @@ const inter = Inter({
 
 const sometype = Sometype_Mono({
     subsets: ["latin"],
-})
+});
 
 export const metadata = {
     title: "Create T3 App",
@@ -27,9 +29,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${sometype.className}`}>
-                {children}
-                <CursorHighlight />
-                <Navbar />
+                <Providers>
+                    {children}
+                    <CursorHighlight />
+                    <Navbar />
+                </Providers>
             </body>
         </html>
     );

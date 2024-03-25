@@ -22,8 +22,6 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 position / document.documentElement.clientHeight,
             );
 
-            console.log(scrollSection);
-
             setActiveLink(scrollSection);
         };
 
