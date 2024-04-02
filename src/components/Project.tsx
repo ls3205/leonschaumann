@@ -1,35 +1,61 @@
 import React, { ReactNode } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/Card";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "./ui/Card";
 import Link from "next/link";
-import { LinkIcon } from "lucide-react";
+import { GithubIcon, LinkIcon } from "lucide-react";
+import TechBadge, { technologies } from "./TechBadge";
+import { Separator } from "./ui/Separator";
 
 interface ProjectProps {
     children?: ReactNode;
     title: string;
     href: string;
+    githubHref: string;
     description: string;
+    technologies: technologies[];
 }
 
 const Project: React.FC<ProjectProps> = ({
     children,
     title,
     href,
+    githubHref,
     description,
+    technologies,
 }) => {
     return (
         <Card className="w-full">
-            <CardHeader>
-                <CardTitle className="text-lg md:text-2xl">{title}</CardTitle>
-                <CardDescription className="overflow-hidden text-ellipsis whitespace-nowrap">
+            <CardHeader className="relative">
+                <CardTitle className="text-lg md:text-2xl">
                     <Link
                         href={href}
-                        className="group text-sm hover:underline overflow-hidden text-ellipsis whitespace-nowrap"
+                        className="group overflow-hidden text-ellipsis whitespace-nowrap hover:underline"
                         target="_blank"
                     >
-                        {href}
-                        <LinkIcon className="visible md:invisible inline w-[1em] align-bottom group-hover:visible" />
+                        {title}
+                        <LinkIcon className="visible mb-1 ml-1 inline w-[1em] align-bottom group-hover:visible md:invisible" />
+                    </Link>
+                </CardTitle>
+                <CardDescription className="flex flex-col overflow-hidden text-ellipsis whitespace-nowrap md:w-min">
+                    <Link
+                        href={githubHref}
+                        className="group overflow-hidden text-ellipsis whitespace-nowrap text-sm hover:underline"
+                        target="_blank"
+                    >
+                        {githubHref}
+                        <LinkIcon className="visible ml-1 inline w-[1em] align-bottom group-hover:visible md:invisible" />
                     </Link>
                 </CardDescription>
+                <div className="space-x-1 space-y-1">
+                    {technologies.map((technology, key) => {
+                        return <TechBadge variant={technology} key={key} />;
+                    })}
+                </div>
             </CardHeader>
             <CardContent>
                 <h3>{description}</h3>

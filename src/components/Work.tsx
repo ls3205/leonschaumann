@@ -6,6 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "./ui/Card";
+import TechBadge, { technologies } from "./TechBadge";
 
 interface WorkProps {
     company: string;
@@ -13,6 +14,7 @@ interface WorkProps {
     description: string;
     skills: string;
     dates: string;
+    technologies: technologies[];
 }
 
 const Work: React.FC<WorkProps> = ({
@@ -21,20 +23,23 @@ const Work: React.FC<WorkProps> = ({
     description,
     skills,
     position,
+    technologies,
 }) => {
     return (
         <Card className="w-full border-none bg-background">
             <CardHeader className="relative">
                 <CardTitle className="text-lg md:text-2xl">{company}</CardTitle>
                 <CardDescription>{position}</CardDescription>
-                <CardDescription>{skills}</CardDescription>
+                <div className="space-x-1 space-y-1">
+                    {technologies.map((technology, key) => {
+                        return <TechBadge variant={technology} key={key} />;
+                    })}
+                </div>
                 <CardDescription className="absolute right-0">
                     {dates}
                 </CardDescription>
             </CardHeader>
-            <CardContent>
-                {description}
-            </CardContent>
+            <CardContent>{description}</CardContent>
         </Card>
     );
 };

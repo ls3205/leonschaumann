@@ -16,6 +16,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         dates="jan. 2024 - current"
                         position="freelance full stack developer"
                         skills="next.js, tailwindcss, prisma, typescript"
+                        technologies={["nextjs", "tailwindcss", "prisma", "typescript"]}
                         description="tbd"
                     />
                     <Separator />
@@ -24,6 +25,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         dates="jun. 2023 - oct. 2023"
                         position="full stack intern"
                         skills="html, css, xsl, xml, javascript"
+                        technologies={["html", "css", "xsl", "xml", "javascript"]}
                         description="proposed, planned, and helped lead a full overhaul of the internal design tool; extrapolated features implemented on the internal tool to be used on the client-side product."
                     />
                     <Separator />
@@ -32,6 +34,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         dates="jun. 2022 - aug. 2022"
                         position="back end intern"
                         skills="javascript, xsl, html, ajax, xml"
+                        technologies={["javascript", "xsl", "html", "ajax", "xml"]}
                         description="eliminating extraneous or out-of-date packages from use in the portal infrastructure system; optimized the client-server ajax request system."
                     />
                 </Expandable>

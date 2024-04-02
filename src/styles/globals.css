@@ -58,6 +58,12 @@
     body {
         @apply bg-background text-foreground;
     }
+    .stackIcon {
+        @apply inline text-lg text-primary absolute left-0 mr-4 top-1/2 -translate-y-1/2
+    }
+    .stackText {
+        @apply relative w-3/4 text-center
+    }
 }
 
 ::-webkit-scrollbar {
