@@ -7,7 +7,7 @@ import Welcome from "~/components/pages/Welcome";
 
 export default function HomePage() {
     return (
-        <div id="main" className="flex-none min-h-[100svh] h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <div id="main" className="flex-none min-h-[100svh] h-[100svh] md:h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
             <Welcome />
             <About />
             <Stack />
