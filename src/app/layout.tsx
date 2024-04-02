@@ -2,7 +2,6 @@ import "~/styles/globals.css";
 
 import { Sometype_Mono } from "next/font/google";
 import Navbar from "~/components/Navbar";
-import CursorHighlight from "~/components/CursorHighlight";
 import Providers from "~/components/Providers";
 
 const sometype = Sometype_Mono({
@@ -25,7 +24,6 @@ export default function RootLayout({
             <body className={`${sometype.className}`}>
                 <Providers>
                     {children}
-                    <CursorHighlight />
                     <Navbar />
                 </Providers>
             </body>

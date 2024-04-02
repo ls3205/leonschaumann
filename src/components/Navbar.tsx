@@ -7,6 +7,7 @@ import { ChevronsDown, Github, Linkedin } from "lucide-react";
 import { Separator } from "./ui/Separator";
 import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
+import { Button } from "./ui/Button";
 
 interface NavbarProps {}
 

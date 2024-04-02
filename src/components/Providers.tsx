@@ -3,6 +3,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React, { ReactNode } from "react";
 import { Toaster } from "./ui/Toaster";
+import CommandPalette from "./CommandPalette";
+import CursorHighlight from "./CursorHighlight";
 
 interface ProvidersProps {
     children?: ReactNode;
@@ -15,6 +17,8 @@ const Providers: React.FC<ProvidersProps> = ({ children }) => {
         <QueryClientProvider client={queryClient}>
             {children}
             <Toaster />
+            <CommandPalette />
+            <CursorHighlight />
         </QueryClientProvider>
     );
 };
