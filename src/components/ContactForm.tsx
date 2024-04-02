@@ -19,9 +19,10 @@ import { Textarea } from "./ui/TextArea";
 import { sendEmail } from "~/app/actions";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "./ui/use-toast";
+import { CrossIcon, SendIcon, X } from "lucide-react";
 
 interface ContactFormProps {
-    className?: string
+    className?: string;
 }
 
 export const formSchema = z.object({
@@ -37,7 +38,7 @@ export const formSchema = z.object({
     message: z.string().min(1, { message: "This field has to be filled." }),
 });
 
-const ContactForm: React.FC<ContactFormProps> = ({className}) => {
+const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
     const { toast } = useToast();
 
     const { mutate: onSubmitMutation } = useMutation({
@@ -147,7 +148,18 @@ const ContactForm: React.FC<ContactFormProps> = ({className}) => {
                         </FormItem>
                     )}
                 />
-                <Button type="submit">Submit</Button>
+                <Button type="submit" className="mt-2">
+                    <SendIcon className="mr-2 h-4 w-4" />
+                    Submit
+                </Button>
+                <Button
+                    type="reset"
+                    variant={"ghost"}
+                    onClick={() => form.reset()}
+                    className="ml-2 mt-2"
+                >
+                    <X className="h-4 w-4" />
+                </Button>
             </form>
         </Form>
     );
