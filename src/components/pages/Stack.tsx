@@ -28,6 +28,8 @@ const Stack: React.FC<StackProps> = ({}) => {
                         backend
                     </h1>
                     <TechBadge variant="prisma" size="large" />
+                    <TechBadge variant="postgresql" size="large" />
+                    <TechBadge variant="mysql" size="large" />
                     <TechBadge variant="nodejs" size="large" />
                     <TechBadge variant="nextjs" size="large" />
                 </div>

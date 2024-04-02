@@ -17,7 +17,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         position="freelance full stack developer"
                         skills="next.js, tailwindcss, prisma, typescript"
                         technologies={["nextjs", "tailwindcss", "prisma", "typescript"]}
-                        description="tbd"
+                        description="providing freelance web development services."
                     />
                     <Separator />
                     <Work
@@ -35,7 +35,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         position="back end intern"
                         skills="javascript, xsl, html, ajax, xml"
                         technologies={["javascript", "xsl", "html", "ajax", "xml"]}
-                        description="eliminating extraneous or out-of-date packages from use in the portal infrastructure system; optimized the client-server ajax request system."
+                        description="eliminated extraneous and out-of-date packages from use in the portal infrastructure system; optimized the client-server ajax request system."
                     />
                 </Expandable>
             </div>

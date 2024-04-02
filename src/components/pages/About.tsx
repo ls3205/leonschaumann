@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "../Page";
 import TechBadge from "../TechBadge";
-import { LinkIcon } from "lucide-react";
+import { LinkIcon, MapPin } from "lucide-react";
 import Link from "next/link";
 
 interface AboutProps {}
@@ -11,21 +11,49 @@ const About: React.FC<AboutProps> = ({}) => {
         <Page id="about">
             <div className="absolute left-[5%] top-1/2 w-[90%] -translate-y-1/2 md:left-[30%] md:top-[20%] md:h-1/2 md:w-1/2 md:-translate-y-0">
                 <h3>
-                    hey, i'm leon, a developer from new york city. i'm 18 and a
-                    senior in high school, and i'm looking to gain experience by
-                    breaking into the freelance scene. i started programming
-                    about 5 years ago with <TechBadge variant="python" />, but
-                    over the years I've moved through several different
-                    languages and technologies before eventually focusing on web
-                    development with <TechBadge variant="nextjs" /> /{" "}
-                    <TechBadge variant="react" />.
+                    hey, my name's leon, nice to meet you. i'm a full stack web
+                    developer from{" "}
+                    <Link
+                        href={"https://www.google.com/search?q=New+York+City"}
+                        target="_blank"
+                        className="text-primary hover:underline"
+                    >
+                        new york{" "}
+                        <MapPin className="inline w-[1em] align-bottom" />
+                    </Link>
+                    . a little bit of my history as a developer: i started
+                    around 2018 by creating little visual art projects and games
+                    in{" "}
+                    <Link
+                        href={"https://p5js.org/"}
+                        about="_blank"
+                        className="text-primary hover:underline"
+                    >
+                        p5.js{" "}
+                        <LinkIcon className="inline w-[1em] align-bottom" />
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                        href={"https://processing.org/"}
+                        about="_blank"
+                        className="text-primary hover:underline"
+                    >
+                        processing{" "}
+                        <LinkIcon className="inline w-[1em] align-bottom" />
+                    </Link>{" "}
+                    for a class. i quickly transitioned to creating more
+                    complicated projects in <TechBadge variant="python" /> and{" "}
+                    <TechBadge variant="javascript" /> with{" "}
+                    <TechBadge variant="nodejs" />. over the following years, i
+                    moved through experimenting with various different languages
+                    until settling on web development with{" "}
+                    <TechBadge variant="nextjs" />/<TechBadge variant="react" />
                 </h3>
-                <h3 className="mt-16">
-                    i primarily offer web development services using{" "}
-                    <TechBadge variant="nextjs" />. additionally, I can provide
-                    services in other langauges for things other than web
-                    development; however, since these languages are not my
-                    primary language, i won't promise anything. for more
+                <h3 className="mt-8">
+                    i offer freelance web development services primarily in{" "}
+                    <TechBadge variant="nextjs" />. i do accept work in other
+                    languages and applications than web development; however, it
+                    is not my strong suit. for more information for more
                     information on what technologies i'm familiar with, see my{" "}
                     <Link
                         href={"#stack"}
@@ -33,10 +61,30 @@ const About: React.FC<AboutProps> = ({}) => {
                     >
                         tech stack{" "}
                         <LinkIcon className="inline w-[1em] align-bottom" />
+                    </Link>
+                    .{" "}
+                </h3>
+                <h3 className="mt-8">
+                    <span className="inline text-primary">
+                        i do not offer hosting.
+                    </span>{" "}
+                    i can, however, advise and assist in the setup of the
+                    hosting service depending on the complexity of what is
+                    required. i deploy my <TechBadge variant="nextjs" />{" "}
+                    projects on{" "}
+                    <Link
+                        href={"https://vercel.com/home"}
+                        target="_blank"
+                        className="group text-primary"
+                    >
+                        <TechBadge
+                            variant="vercel"
+                            className="group-hover:bg-primary"
+                        />
+                        <LinkIcon className="inline w-[1em] align-bottom" />
                     </Link>{" "}
-                    below. additionally, while i can help when it comes to
-                    things like hosting websites and databases, i do not offer
-                    any hosting services.
+                    because of the simplicity of their deployment pipeline and
+                    it is what i would recommend for most.
                 </h3>
             </div>
         </Page>
