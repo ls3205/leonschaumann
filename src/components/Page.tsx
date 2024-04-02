@@ -9,7 +9,7 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children, id }) => {
     return (
-        <section id={id} className="min-h-screen w-full snap-center">
+        <section id={id} className="min-h-[100svh] md:min-h-screen w-full snap-center">
             <div className="relative h-screen w-full overflow-x-hidden">{children}</div>
         </section>
     );
