@@ -15,8 +15,8 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         company="freelance"
                         dates="jan. 2024 - current"
                         position="freelance full stack developer"
-                        skills="next.js, tailwindcss, prisma, "
-                        description="proposed, planned, and helped lead a full overhaul of the internal design tool; extrapolated features implemented on the internal tool to be used on the client-side product."
+                        skills="next.js, tailwindcss, prisma, typescript"
+                        description="tbd"
                     />
                     <Separator />
                     <Work
