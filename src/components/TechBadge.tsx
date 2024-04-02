@@ -23,7 +23,8 @@ import { cn } from "~/lib/utils";
 interface TechBadgeProps {
     variant: technologies;
     size?: "large" | "normal";
-    className?: string
+    className?: string;
+    blur?: boolean;
 }
 
 export type technologies =
@@ -120,31 +121,46 @@ const variants = {
     react: {
         icon: <SiReact className="mr-2" />,
         title: "react",
-        className: "bg-sky-300 text-neutral-800"
+        className: "bg-sky-300 text-neutral-800",
     },
     nodejs: {
         icon: <SiNodedotjs className="mr-2" />,
         title: "node.js",
-        className: "bg-green-600 text-white"
+        className: "bg-green-600 text-white",
     },
     python: {
         icon: <SiPython className="mr-2" />,
         title: "python",
-        className: "bg-sky-700 text-white"
+        className: "bg-sky-700 text-white",
     },
     arduino: {
         icon: <SiArduino className="mr-2" />,
         title: "arduino",
-        className: "bg-teal-700 text-white"
-    }
+        className: "bg-teal-700 text-white",
+    },
 };
 
-const TechBadge: React.FC<TechBadgeProps> = ({ variant, size = "normal", className }) => {
+const TechBadge: React.FC<TechBadgeProps> = ({
+    variant,
+    size = "normal",
+    className,
+    blur = false,
+}) => {
     return (
         <Badge
             variant={size === "normal" ? "noHover" : "large"}
-            className={cn("", className, variants[variant].className)}
+            className={cn("relative", className, variants[variant].className)}
         >
+            {blur ? (
+                <div
+                    className={cn(
+                        "absolute -z-50 h-full w-full blur-2xl",
+                        variants[variant].className,
+                    )}
+                />
+            ) : (
+                ""
+            )}
             {variants[variant].icon}
             {variants[variant].title}
         </Badge>

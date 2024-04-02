@@ -42,19 +42,21 @@ const About: React.FC<AboutProps> = ({}) => {
                         <LinkIcon className="inline w-[1em] align-bottom" />
                     </Link>{" "}
                     for a class. i quickly transitioned to creating more
-                    complicated projects in <TechBadge variant="python" /> and{" "}
-                    <TechBadge variant="javascript" /> with{" "}
-                    <TechBadge variant="nodejs" />. over the following years, i
-                    moved through experimenting with various different languages
-                    until settling on web development with{" "}
-                    <TechBadge variant="nextjs" />/<TechBadge variant="react" />
+                    complicated projects in <TechBadge blur variant="python" />{" "}
+                    and <TechBadge blur variant="javascript" /> with{" "}
+                    <TechBadge blur variant="nodejs" />. over the following
+                    years, i moved through experimenting with various different
+                    languages until settling on web development with{" "}
+                    <TechBadge blur variant="nextjs" />/
+                    <TechBadge blur variant="react" />
                 </h3>
-                <h3 className="text-sm md:text-base mt-8">
+                <h3 className="mt-8 text-sm md:text-base">
                     i offer freelance web development services primarily in{" "}
-                    <TechBadge variant="nextjs" />. i do accept work in other
-                    languages and applications than web development; however, it
-                    is not my strong suit. for more information for more
-                    information on what technologies i'm familiar with, see my{" "}
+                    <TechBadge blur variant="nextjs" />. i do accept work in
+                    other languages and applications than web development;
+                    however, it is not my strong suit. for more information for
+                    more information on what technologies i'm familiar with, see
+                    my{" "}
                     <Link
                         href={"#stack"}
                         className="text-primary hover:underline"
@@ -64,13 +66,13 @@ const About: React.FC<AboutProps> = ({}) => {
                     </Link>
                     .{" "}
                 </h3>
-                <h3 className="text-sm md:text-base mt-8">
+                <h3 className="mt-8 text-sm md:text-base">
                     <span className="inline text-primary">
                         i do not offer hosting.
                     </span>{" "}
                     i can, however, advise and assist in the setup of the
                     hosting service depending on the complexity of what is
-                    required. i deploy my <TechBadge variant="nextjs" />{" "}
+                    required. i deploy my <TechBadge blur variant="nextjs" />{" "}
                     projects on{" "}
                     <Link
                         href={"https://vercel.com/home"}
@@ -78,6 +80,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         className="group text-primary"
                     >
                         <TechBadge
+                            blur
                             variant="vercel"
                             className="group-hover:bg-primary"
                         />
