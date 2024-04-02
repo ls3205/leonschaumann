@@ -20,7 +20,9 @@ import { sendEmail } from "~/app/actions";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "./ui/use-toast";
 
-interface ContactFormProps {}
+interface ContactFormProps {
+    className?: string
+}
 
 export const formSchema = z.object({
     name: z.string().min(1, { message: "This field has to be filled." }),
@@ -35,7 +37,7 @@ export const formSchema = z.object({
     message: z.string().min(1, { message: "This field has to be filled." }),
 });
 
-const ContactForm: React.FC<ContactFormProps> = ({}) => {
+const ContactForm: React.FC<ContactFormProps> = ({className}) => {
     const { toast } = useToast();
 
     const { mutate: onSubmitMutation } = useMutation({
@@ -55,7 +57,7 @@ const ContactForm: React.FC<ContactFormProps> = ({}) => {
         onError: (err) => {
             return toast({
                 title: "An Error Occurred!",
-                description: `${err}`,
+                description: `Please try again.`,
                 variant: "destructive",
                 duration: 2000,
             });

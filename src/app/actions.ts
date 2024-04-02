@@ -1,9 +1,9 @@
 "use server"
 
-import { z } from "zod"
-import { formSchema } from "~/components/ContactForm"
+import type { z } from "zod"
+import type { formSchema } from "~/components/ContactForm"
 import nodemailer from "nodemailer"
-import Mail from "nodemailer/lib/mailer"
+import type Mail from "nodemailer/lib/mailer"
 
 export const sendEmail = async (values: z.infer<typeof formSchema>) => {
     const transport = nodemailer.createTransport({

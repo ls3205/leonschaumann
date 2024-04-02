@@ -38,9 +38,9 @@ const getVariant = (
 };
 
 const getMessage = (hour: number) => {
-    if (hour > 2 && hour <= 12) {
+    if (hour > 2 && hour <= 11) {
         return "good morning";
-    } else if (hour > 12 && hour <= 16) {
+    } else if (hour > 11 && hour <= 16) {
         return "good afternoon";
     } else {
         return "good evening";

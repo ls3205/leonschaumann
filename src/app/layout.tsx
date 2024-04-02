@@ -1,15 +1,9 @@
 import "~/styles/globals.css";
 
-import { Inter, Sometype_Mono } from "next/font/google";
+import { Sometype_Mono } from "next/font/google";
 import Navbar from "~/components/Navbar";
 import CursorHighlight from "~/components/CursorHighlight";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Providers from "~/components/Providers";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-sans",
-});
 
 const sometype = Sometype_Mono({
     subsets: ["latin"],

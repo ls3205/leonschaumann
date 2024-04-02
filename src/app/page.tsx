@@ -1,5 +1,3 @@
-import { useScroll, useSpring } from "framer-motion";
-import Link from "next/link";
 import About from "~/components/pages/About";
 import Contact from "~/components/pages/Contact";
 import Experience from "~/components/pages/Experience";
