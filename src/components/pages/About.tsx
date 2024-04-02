@@ -10,7 +10,7 @@ const About: React.FC<AboutProps> = ({}) => {
     return (
         <Page id="about">
             <div className="absolute left-[5%] top-1/2 w-[90%] -translate-y-1/2 md:left-[30%] md:top-[20%] md:h-1/2 md:w-1/2 md:-translate-y-0">
-                <h3>
+                <h3 className="text-sm md:text-base">
                     hey, my name's leon, nice to meet you. i'm a full stack web
                     developer from{" "}
                     <Link
@@ -49,7 +49,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     until settling on web development with{" "}
                     <TechBadge variant="nextjs" />/<TechBadge variant="react" />
                 </h3>
-                <h3 className="mt-8">
+                <h3 className="text-sm md:text-base mt-8">
                     i offer freelance web development services primarily in{" "}
                     <TechBadge variant="nextjs" />. i do accept work in other
                     languages and applications than web development; however, it
@@ -64,7 +64,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     </Link>
                     .{" "}
                 </h3>
-                <h3 className="mt-8">
+                <h3 className="text-sm md:text-base mt-8">
                     <span className="inline text-primary">
                         i do not offer hosting.
                     </span>{" "}
