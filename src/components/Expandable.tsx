@@ -18,6 +18,9 @@ const Expandable: React.FC<ExpandableProps> = ({ children }) => {
                     <ScrollArea className="h-full w-full block">
                         <div className="space-y-5 flex flex-col p-4">
                             {children}
+                            <Button className="w-min ml-auto mr-auto" onClick={() => setOpened(false)}>
+                                Collapse
+                            </Button>
                         </div>
                     </ScrollArea>
                 </div>
