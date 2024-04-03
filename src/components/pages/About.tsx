@@ -54,7 +54,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     i offer freelance web development services primarily in{" "}
                     <TechBadge blur variant="nextjs" />. i do accept work in
                     other languages and applications than web development;
-                    however, it is not my strong suit. for more information for
+                    however, it is not my strong suit. for
                     more information on what technologies i'm familiar with, see
                     my{" "}
                     <Link
