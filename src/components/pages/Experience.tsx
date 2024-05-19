@@ -20,6 +20,15 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                         description="providing freelance web development services."
                     />
                     <Separator />
+                    <Work 
+                        company="XVERSO"
+                        dates="apr. 2024 - jun. 2024"
+                        position="front end intern"
+                        skills="nextjs, react, tailwindcss"
+                        technologies={["nextjs", "react", "tailwindcss"]}
+                        description="overhauled and made new email templates; implemented missing seo features; researched and started working towards implementing a journal/newsletter for seo."
+                    />
+                    <Separator />
                     <Work
                         company="e-Serve AG"
                         dates="jun. 2023 - oct. 2023"
