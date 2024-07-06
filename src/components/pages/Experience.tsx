@@ -22,7 +22,7 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
                     <Separator />
                     <Work 
                         company="XVERSO"
-                        dates="apr. 2024 - jun. 2024"
+                        dates="apr. 2024 - aug. 2024"
                         position="front end intern"
                         skills="nextjs, react, tailwindcss"
                         technologies={["nextjs", "react", "tailwindcss"]}
