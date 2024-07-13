@@ -34,7 +34,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
                         title="Musistics"
                         href="https://musistics.vercel.app/"
                         githubHref="https://github.com/ls3205/musistics"
-                        description="a spotify statistics app; note: as of 7-13-24, i am still waiting on the spotify app verification process"
+                        description="a spotify statistics app; note: as of 7-13-24, spotify has not yet approved the app for external use"
                         technologies={["nextjs", "tailwindcss", "spotify", "vercel"]}
                     />
                     <Project
