@@ -16,6 +16,7 @@ interface ProjectProps {
     title: string;
     href: string;
     githubHref: string;
+    demoHref?: string;
     description: string;
     technologies: technologies[];
 }
@@ -25,6 +26,7 @@ const Project: React.FC<ProjectProps> = ({
     title,
     href,
     githubHref,
+    demoHref,
     description,
     technologies,
 }) => {
@@ -50,6 +52,18 @@ const Project: React.FC<ProjectProps> = ({
                         {githubHref}
                         <LinkIcon className="visible ml-1 inline w-[1em] align-bottom group-hover:visible md:invisible" />
                     </Link>
+                    {demoHref ? (
+                        <Link
+                            href={demoHref}
+                            className="group overflow-hidden text-ellipsis whitespace-nowrap text-sm hover:underline"
+                            target="_blank"
+                        >
+                            {demoHref}
+                            <LinkIcon className="visible ml-1 inline w-[1em] align-bottom group-hover:visible md:invisible" />
+                        </Link>
+                    ) : (
+                        ""
+                    )}
                 </CardDescription>
                 <div className="space-x-1 space-y-1">
                     {technologies.map((technology, key) => {
